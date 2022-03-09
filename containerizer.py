@@ -12,7 +12,7 @@ from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
-maxLifeTime = timedelta(seconds=5) # Container maximum active time without any interaction from the user
+maxLifeTime = timedelta(minutes=21) # Container maximum active time without any interaction from the user
 containers = {}
 isExiting = {}
 
