@@ -57,6 +57,8 @@ An implementation of a symmetric authenticated cryptography algorithm is used.
 | reboot | None | Reloads the page |
 | restart | None | Reloads the page |
 
+---
+
 ## Error codes
 ### (internal)
 | Code | Description |
@@ -67,5 +69,11 @@ An implementation of a symmetric authenticated cryptography algorithm is used.
 | 0x004 | Missing Command |
 | 0x005 | command not found |
 | 0x006 | this command requires at least 1 argument |
+
+---
+
+## Images
+<img width="527" alt="shell" src="https://user-images.githubusercontent.com/32342284/157497969-83b7278f-57dc-44ef-a0e3-306e1b4a0350.png">
+<img width="459" alt="ls" src="https://user-images.githubusercontent.com/32342284/157498092-d5b5afd8-d388-4cf8-ad20-855ee7cff1a0.png">
 
 ##### by Brhaka
