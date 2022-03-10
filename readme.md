@@ -1,5 +1,5 @@
 # WebShell
-Shell developed in Vue.js, Python and Docker.
+Shell developed with Vue.js, Python and Docker.
 ##### by Brhaka
 
 ---
