@@ -25,7 +25,7 @@
 			connect () {
 				this.$refs.connectMsg.style.display = "block"
 
-				fetch(`http://localhost:8000/start`, {
+				fetch(`${process.env.VUE_APP_VIRTUALIZER_HOST}/start`, {
 				method: "GET"
 				})
 				.then(response => response.json()) // Parses the return to JSON
@@ -63,7 +63,6 @@
 				}
 
 				this.$refs.seconds.innerHTML = remaining
-				console.log(remaining)
 
 				setTimeout(() => {
 					this.updateSeconds(++elapsed)

@@ -242,7 +242,7 @@ export default {
 			}
 		},
 		executeCommand(input, command) {
-			fetch(`http://localhost:8000/executeCommand?id=${this.vmId}&command=${input}`, {
+			fetch(`${process.env.VUE_APP_VIRTUALIZER_HOST}/executeCommand?id=${this.vmId}&command=${input}`, {
 				method: "GET"
 			})
 			.then(response => response.json()) // Parses the return to JSON
