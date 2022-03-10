@@ -280,7 +280,7 @@ export default {
 	outline: none;
 	width: 100%;
 	max-width: 100%;
-	height: 100%;
+	height: 100%; /* Adjust textarea size to fill all the screen height when typing */
 	max-height: 100%;
 	overflow-wrap: break-word;
 	overflow: auto;
