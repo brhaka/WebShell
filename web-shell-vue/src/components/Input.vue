@@ -7,7 +7,7 @@
 						<span class="prompt">{{ prompt }}</span>
 					</td>
 					<td>
-						<textarea class="inputTextarea" ref="inputs" autofocus="true" onblur="this.focus()" @keyup="handleKeyUp($event);" @input="verifyContent($event);adjustInputSize($event.target);" v-model="input.content" spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" />
+						<textarea class="inputTextarea" ref="inputs" autofocus="true" onblur="this.focus()" @keyup="handleKeyUp($event);" @input="verifyContent($event);adjustInputSize($event.target);" v-model="input.content" autocomplete="nope" spellcheck="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" />
 					</td>
 				</tr>
 			</table>
