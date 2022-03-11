@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from termcolor import colored
 from urllib import request
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
@@ -46,6 +47,7 @@ class CryptManager():
 
 # Initiates Flask
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/start", methods = ["GET"])
 def start():
