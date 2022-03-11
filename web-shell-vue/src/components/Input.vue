@@ -62,22 +62,22 @@ export default {
 			console.log(msg)
 		},
 		handleKeyUp (event) {
-			if (event.keyCode == 13) { // Enter
+			if (event.keyCode === 13) { // Enter
 				if (event.target.value != "") {
 					this.saveToHistory(event)
 				}
 				this.runCommand(event)
-			} else if (!event.shiftKey && event.ctrlKey && event.keyCode == 67) { // CTRL + C (without Shift)
+			} else if (!event.shiftKey && event.ctrlKey && event.keyCode === 67) { // CTRL + C (without Shift)
 				this.newInput("", false)
-			} else if (event.ctrlKey& event.keyCode == 68) { // CRTL + D
+			} else if (event.ctrlKey& event.keyCode === 68) { // CRTL + D
 				location.reload()
-			} else if (event.keyCode == 38) { // Up arrow
+			} else if (event.keyCode === 38) { // Up arrow
 				event.target.value = this.fetchHistory(1)
 				event.preventDefault()
-			} else if (event.keyCode == 40) { // Down arrow
+			} else if (event.keyCode === 40) { // Down arrow
 				event.target.value = this.fetchHistory(-1)
 				event.preventDefault()
-			} else if (event.keyCode == 27) { // Escape
+			} else if (event.keyCode === 27) { // Escape
 				if (this.isEmbeddedOpen) {
 					this.newInput()
 					this.isEmbeddedOpen = false
@@ -168,7 +168,7 @@ export default {
 
 			this.historyIndex -= direction
 
-			if (this.historyIndex == this.history.length) {
+			if (this.historyIndex === this.history.length) {
 				return ""
 			} else if (this.historyIndex > this.history.length) {
 				this.historyIndex += direction

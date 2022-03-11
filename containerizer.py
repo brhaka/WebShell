@@ -136,10 +136,7 @@ def stop(id):
 	containerActionPrint(id, "Destroyed", "red")
 
 def exit():
-	runningContainers = []
-	for id, status in containers.items():
-		if status != None:
-			runningContainers.append(id)
+	runningContainers = [id for id, status in containers.items() if status]
 
 	if len(runningContainers) <= 0:
 		return

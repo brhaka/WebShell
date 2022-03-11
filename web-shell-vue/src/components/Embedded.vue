@@ -13,7 +13,7 @@ export default {
 		let self = this
 
 		window.addEventListener("keydown", function(event) {
-			if (event.code == "Escape") {
+			if (event.code === "Escape") {
 				self.$destroy();
 				if (self.$el.parentNode) {
 					self.$el.parentNode.removeChild(self.$el);
