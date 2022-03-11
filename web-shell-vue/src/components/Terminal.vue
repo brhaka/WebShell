@@ -26,7 +26,7 @@
 				this.$refs.connectMsg.style.display = "block"
 
 				fetch(`${process.env.VUE_APP_VIRTUALIZER_HOST}/start`, {
-				method: "GET"
+					method: "GET",
 				})
 				.then(response => response.json()) // Parses the return to JSON
 				.then(data => {

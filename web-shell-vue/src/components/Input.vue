@@ -56,6 +56,13 @@ export default {
 	created() {
 		this.history = document.cookie.replace("History=", "").split(",")
 		this.historyIndex = this.history.length
+
+		window.addEventListener("touchstart", () => {
+			this.$refs.inputs[this.counter].focus()
+		})
+		window.addEventListener("click", () => {
+			this.$refs.inputs[this.counter].focus()
+		})
 	},
 	methods: {
 		log (msg) {
@@ -243,7 +250,7 @@ export default {
 		},
 		executeCommand(input, command) {
 			fetch(`${process.env.VUE_APP_VIRTUALIZER_HOST}/executeCommand?id=${this.vmId}&command=${input}`, {
-				method: "GET"
+				method: "GET",
 			})
 			.then(response => response.json()) // Parses the return to JSON
 			.then(data => {
